@@ -2342,3 +2342,308 @@ body.detail-page .site-title {
 .docs-detail-source a {
     text-decoration: underline;
 }
+
+/* ===========================================
+   24. DOCS PAGES - RESPONSIVE
+   =========================================== */
+
+/* Tablet (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Docs List Page */
+    .docs-nav .site-title {
+        font-size: 4vw;
+    }
+
+    .docs-nav .mini-nav {
+        gap: 3vw;
+    }
+
+    .docs-nav .mini-nav a {
+        font-size: 1.8vw;
+    }
+
+    .docs-main-title {
+        font-size: 18vw;
+    }
+
+    .docs-tabs {
+        gap: 4vw;
+    }
+
+    .docs-tab {
+        font-size: 8vw;
+    }
+
+    .docs-article {
+        gap: 3vw;
+    }
+
+    .docs-article.reverse {
+        padding-left: 2vw;
+    }
+
+    .docs-article-img {
+        width: 55vw;
+    }
+
+    .docs-article-type {
+        font-size: 2vw;
+    }
+
+    .docs-article-title {
+        font-size: 6vw;
+    }
+
+    .docs-readmore img {
+        width: 5vw;
+    }
+
+    .docs-readmore span {
+        font-size: 2.5vw;
+    }
+
+    /* Docs Detail Page */
+    .docs-detail-header .site-title {
+        font-size: 4vw;
+    }
+
+    .docs-detail-nav {
+        gap: 3vw;
+    }
+
+    .docs-detail-nav a {
+        font-size: 1.8vw;
+    }
+
+    .docs-detail-intro {
+        padding: 4vw 8vw;
+    }
+
+    .docs-detail-date {
+        font-size: 2vw;
+    }
+
+    .docs-detail-title {
+        font-size: 6vw;
+    }
+
+    .docs-detail-content {
+        padding: 0 8vw;
+    }
+
+    .docs-detail-share span {
+        font-size: 1.8vw;
+    }
+
+    .docs-detail-body {
+        max-width: 70vw;
+        gap: 3vw;
+    }
+
+    .docs-detail-author {
+        font-size: 1.5vw;
+    }
+
+    .docs-detail-subtitle {
+        font-size: 2.5vw;
+    }
+
+    .docs-detail-heading {
+        font-size: 2.2vw;
+    }
+
+    .docs-detail-text {
+        font-size: 2vw;
+    }
+
+    .docs-detail-image img {
+        width: 100%;
+    }
+
+    .docs-detail-source {
+        font-size: 2vw;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Docs List Page */
+    .docs-header {
+        padding: 5vw 4vw;
+    }
+
+    .docs-nav {
+        gap: 6vw;
+    }
+
+    .docs-nav .site-title {
+        font-size: 6vw;
+    }
+
+    .docs-nav .mini-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4vw;
+    }
+
+    .docs-nav .mini-nav a {
+        font-size: 3.5vw;
+    }
+
+    .docs-hero {
+        padding: 4vw;
+        padding-top: 8vw;
+    }
+
+    .docs-main-title {
+        font-size: 22vw;
+    }
+
+    .docs-tabs {
+        flex-wrap: wrap;
+        gap: 5vw;
+    }
+
+    .docs-tab {
+        font-size: 10vw;
+    }
+
+    .docs-articles {
+        padding: 4vw;
+        gap: 10vw;
+        margin-top: 8vw;
+    }
+
+    .docs-article {
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    .docs-article.reverse {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .docs-article-img {
+        width: 100%;
+    }
+
+    .docs-article-info {
+        gap: 3vw;
+    }
+
+    .docs-article-type {
+        font-size: 3.5vw;
+    }
+
+    .docs-article-title {
+        font-size: 10vw;
+    }
+
+    .docs-readmore {
+        gap: 3vw;
+    }
+
+    .docs-readmore img {
+        width: 8vw;
+    }
+
+    .docs-readmore span {
+        font-size: 4vw;
+    }
+
+    .docs-showmore {
+        padding: 4vw;
+        margin-top: 5vw;
+        margin-bottom: 8vw;
+    }
+
+    .docs-showmore .show-more-btn {
+        gap: 2vw;
+    }
+
+    .docs-showmore .show-more-btn i {
+        font-size: 5vw;
+    }
+
+    .docs-showmore .show-more-btn span {
+        font-size: 4vw;
+    }
+
+    /* Docs Detail Page */
+    .docs-detail-hero {
+        height: 60vw;
+    }
+
+    .docs-detail-header {
+        top: 15vw;
+        gap: 4vw;
+    }
+
+    .docs-detail-header .site-title {
+        font-size: 6vw;
+    }
+
+    .docs-detail-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4vw;
+    }
+
+    .docs-detail-nav a {
+        font-size: 3.5vw;
+    }
+
+    .docs-detail-intro {
+        padding: 6vw 4vw;
+    }
+
+    .docs-detail-date {
+        font-size: 3.5vw;
+    }
+
+    .docs-detail-title {
+        font-size: 8vw;
+    }
+
+    .docs-detail-content {
+        flex-direction: column;
+        padding: 0 4vw;
+        gap: 4vw;
+        margin-bottom: 8vw;
+    }
+
+    .docs-detail-share span {
+        font-size: 3vw;
+    }
+
+    .docs-detail-body {
+        max-width: 100%;
+        gap: 5vw;
+    }
+
+    .docs-detail-author {
+        font-size: 3vw;
+    }
+
+    .docs-detail-subtitle {
+        font-size: 4.5vw;
+    }
+
+    .docs-detail-heading {
+        font-size: 4vw;
+    }
+
+    .docs-detail-text {
+        font-size: 3.8vw;
+        line-height: 1.6;
+    }
+
+    .docs-detail-image img {
+        width: 100%;
+    }
+
+    .docs-detail-source {
+        font-size: 3.8vw;
+    }
+}
