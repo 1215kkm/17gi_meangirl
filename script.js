@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Custom Cursor - Only visible on link hover
     // ===========================================
     const cursor = document.querySelector('.custom-cursor');
+    let cursorDirection = null;
 
     if (cursor) {
         // Track mouse position
@@ -18,13 +19,153 @@ document.addEventListener('DOMContentLoaded', function() {
 
         links.forEach(link => {
             link.addEventListener('mouseenter', function() {
+                cursor.classList.remove('cursor-left', 'cursor-right');
                 cursor.classList.add('visible');
             });
 
             link.addEventListener('mouseleave', function() {
-                cursor.classList.remove('visible');
+                cursor.classList.remove('visible', 'cursor-left', 'cursor-right');
             });
         });
+    }
+
+    // ===========================================
+    // Hero Slider with Auto-play (7 seconds)
+    // ===========================================
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroTitles = document.querySelectorAll('.hero-title-list li');
+    const progressFill = document.querySelector('.hero-progress-fill');
+    let currentSlide = 0;
+    let slideInterval;
+    let progressInterval;
+    const slideDuration = 7000; // 7 seconds
+    const progressStep = 50; // Update every 50ms
+
+    function updateHeroSlide(index, direction = 'next') {
+        // Update slides
+        heroSlides.forEach((slide, i) => {
+            slide.classList.remove('active', 'prev');
+            if (i === index) {
+                slide.classList.add('active');
+            } else if (direction === 'next' && i === (index - 1 + heroSlides.length) % heroSlides.length) {
+                slide.classList.add('prev');
+            }
+        });
+
+        // Update titles
+        heroTitles.forEach((title, i) => {
+            title.classList.remove('active');
+            if (i === index) {
+                title.classList.add('active');
+            }
+        });
+    }
+
+    function startProgress() {
+        let progress = 0;
+        if (progressFill) {
+            progressFill.style.width = '0%';
+        }
+
+        progressInterval = setInterval(() => {
+            progress += (progressStep / slideDuration) * 100;
+            if (progressFill) {
+                progressFill.style.width = progress + '%';
+            }
+        }, progressStep);
+    }
+
+    function nextSlide() {
+        clearInterval(progressInterval);
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        updateHeroSlide(currentSlide, 'next');
+        startProgress();
+    }
+
+    function startAutoSlide() {
+        if (heroSlides.length > 0) {
+            updateHeroSlide(currentSlide);
+            startProgress();
+            slideInterval = setInterval(nextSlide, slideDuration);
+        }
+    }
+
+    // Title click to change slide
+    heroTitles.forEach((title, index) => {
+        title.addEventListener('click', function() {
+            clearInterval(slideInterval);
+            clearInterval(progressInterval);
+            currentSlide = index;
+            updateHeroSlide(currentSlide);
+            startProgress();
+            slideInterval = setInterval(nextSlide, slideDuration);
+        });
+
+        title.addEventListener('mouseenter', function() {
+            clearInterval(slideInterval);
+            clearInterval(progressInterval);
+            currentSlide = index;
+            updateHeroSlide(currentSlide);
+            if (progressFill) {
+                progressFill.style.width = '0%';
+            }
+        });
+
+        title.addEventListener('mouseleave', function() {
+            startProgress();
+            slideInterval = setInterval(nextSlide, slideDuration);
+        });
+    });
+
+    startAutoSlide();
+
+    // ===========================================
+    // All Films Swiper
+    // ===========================================
+    const allfilmsSwiperContainer = document.querySelector('.allfilms-swiper');
+    let allfilmsSwiper = null;
+
+    if (allfilmsSwiperContainer && typeof Swiper !== 'undefined') {
+        allfilmsSwiper = new Swiper('.allfilms-swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 6,
+            speed: 800,
+            easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+            grabCursor: false,
+            allowTouchMove: true,
+        });
+
+        // Navigation areas with arrow cursors
+        const prevArea = document.querySelector('.swiper-nav-prev');
+        const nextArea = document.querySelector('.swiper-nav-next');
+
+        if (prevArea && cursor) {
+            prevArea.addEventListener('mouseenter', function() {
+                cursor.classList.add('visible', 'cursor-left');
+            });
+
+            prevArea.addEventListener('mouseleave', function() {
+                cursor.classList.remove('visible', 'cursor-left');
+            });
+
+            prevArea.addEventListener('click', function() {
+                allfilmsSwiper.slidePrev();
+            });
+        }
+
+        if (nextArea && cursor) {
+            nextArea.addEventListener('mouseenter', function() {
+                cursor.classList.add('visible', 'cursor-right');
+            });
+
+            nextArea.addEventListener('mouseleave', function() {
+                cursor.classList.remove('visible', 'cursor-right');
+            });
+
+            nextArea.addEventListener('click', function() {
+                allfilmsSwiper.slideNext();
+            });
+        }
     }
 
     // ===========================================

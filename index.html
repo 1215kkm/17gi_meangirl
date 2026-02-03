@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -29,51 +30,120 @@
             </nav>
         </header>
 
-        <!-- Hero Section -->
+        <!-- Hero Section with Slide -->
         <section class="section hero">
-            <figure class="hero-bg">
-                <img src="./images/image_1140_61.png" alt="Hero Background">
-            </figure>
+            <div class="hero-slider">
+                <div class="hero-slide active" data-index="0">
+                    <figure class="hero-bg">
+                        <img src="./images/image_1140_61.png" alt="No Other Choice">
+                    </figure>
+                </div>
+                <div class="hero-slide" data-index="1">
+                    <figure class="hero-bg">
+                        <img src="./images/past_lives.png" alt="Parasite">
+                    </figure>
+                </div>
+                <div class="hero-slide" data-index="2">
+                    <figure class="hero-bg">
+                        <img src="./images/past_lives.png" alt="Past Lives">
+                    </figure>
+                </div>
+                <div class="hero-slide" data-index="3">
+                    <figure class="hero-bg">
+                        <img src="./images/anora.png" alt="Anora">
+                    </figure>
+                </div>
+                <div class="hero-slide" data-index="4">
+                    <figure class="hero-bg">
+                        <img src="./images/image_1140_61.png" alt="Anatomy of a Fall">
+                    </figure>
+                </div>
+                <div class="hero-slide" data-index="5">
+                    <figure class="hero-bg">
+                        <img src="./images/past_lives.png" alt="It Was Just an Accident">
+                    </figure>
+                </div>
+            </div>
 
             <div class="hero-content">
                 <ul class="hero-title-list">
-                    <li>NO OTHER CHOICE <span>2025</span></li>
-                    <li>PARASITE <span>2019</span></li>
-                    <li class="active">PAST LIVES <span>2022</span></li>
-                    <li>ANORA <span>2024</span></li>
-                    <li>ANATOMY OF ALL <span>2023</span></li>
-                    <li>IT WAS JUST AN ACCIDENTE <span>2022</span></li>
+                    <li data-index="0">NO OTHER CHOICE <span>2025</span></li>
+                    <li data-index="1">PARASITE <span>2019</span></li>
+                    <li data-index="2" class="active">PAST LIVES <span>2022</span></li>
+                    <li data-index="3">ANORA <span>2024</span></li>
+                    <li data-index="4">ANATOMY OF ALL <span>2023</span></li>
+                    <li data-index="5">IT WAS JUST AN ACCIDENTE <span>2022</span></li>
                 </ul>
             </div>
 
-            <div class="scroll-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="1" stroke-linecap="square">
-                    <path d="M12 5v14M19 12l-7 7-7-7" />
-                </svg>
+            <!-- Progress Bar -->
+            <div class="hero-progress-bar">
+                <div class="hero-progress-fill"></div>
             </div>
         </section>
 
         <div class="content-wrapper">
-            <!-- All Films Section -->
+            <!-- All Films Section with Swiper -->
             <section class="section all-films">
                 <h2 class="section-title">ALL FILMS</h2>
-                <div class="grid-2-col">
-                    <article class="card">
-                        <figure class="placeholder-img rect-large">
-                            <span class="ph-text">No Other Choice (Img)</span>
-                        </figure>
-                        <div class="card-info">
-                            <span class="card-title">No other choice</span>
+                <div class="allfilms-swiper-container">
+                    <div class="swiper allfilms-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="card">
+                                    <figure class="placeholder-img rect-large">
+                                        <span class="ph-text">No Other Choice</span>
+                                    </figure>
+                                    <div class="card-info">
+                                        <span class="card-title">No other choice</span>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card">
+                                    <figure class="placeholder-img rect-large">
+                                        <span class="ph-text">Parasite</span>
+                                    </figure>
+                                    <div class="card-info">
+                                        <span class="card-title">Parasite</span>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card">
+                                    <figure class="placeholder-img rect-large">
+                                        <span class="ph-text">Past Lives</span>
+                                    </figure>
+                                    <div class="card-info">
+                                        <span class="card-title">Past Lives</span>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card">
+                                    <figure class="placeholder-img rect-large">
+                                        <span class="ph-text">Anora</span>
+                                    </figure>
+                                    <div class="card-info">
+                                        <span class="card-title">Anora</span>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card">
+                                    <figure class="placeholder-img rect-large">
+                                        <span class="ph-text">Anatomy of a Fall</span>
+                                    </figure>
+                                    <div class="card-info">
+                                        <span class="card-title">Anatomy of a Fall</span>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                    </article>
-                    <article class="card">
-                        <figure class="placeholder-img rect-large">
-                            <span class="ph-text">Parasite (Img)</span>
-                        </figure>
-                        <div class="card-info">
-                            <span class="card-title">Parasite</span>
-                        </div>
-                    </article>
+                    </div>
+                    <!-- Navigation areas for cursor -->
+                    <div class="swiper-nav-prev"></div>
+                    <div class="swiper-nav-next"></div>
                 </div>
             </section>
 
@@ -187,6 +257,7 @@
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
