@@ -1,0 +1,1475 @@
+/* ===================================================
+   MEAN GIRLS - Unified Stylesheet
+   =================================================== */
+
+/* ===========================================
+   1. GLOBAL RESET & BASE STYLES
+   =========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ===========================================
+   2. CUSTOM CURSOR (Link Hover Only)
+   =========================================== */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5.8333vw;
+    height: 5.9896vw;
+    background-image: url('../images/svg/cursor_pink.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.custom-cursor.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Green cursor for collections pages */
+body.collections-page .custom-cursor {
+    background-image: url('../images/svg/cursor_green.svg');
+}
+
+/* ===========================================
+   3. CONTENT WRAPPER
+   =========================================== */
+.content-wrapper {
+    max-width: 100.0000vw;
+    margin: 0 1.0417vw;
+    padding: 0;
+}
+
+/* ===========================================
+   4. TYPOGRAPHY
+   =========================================== */
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.2292vw;
+    margin: 0;
+    padding: 0 1.0417vw;
+    color: #111;
+    letter-spacing: 0.0260vw;
+}
+
+.section-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6.6667vw;
+    font-weight: 500;
+    margin-bottom: 1.0417vw;
+    color: #2B2929;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.right-align {
+    text-align: right;
+    width: 100%;
+    line-height: normal;
+}
+
+/* ===========================================
+   5. HEADER & NAVIGATION
+   =========================================== */
+.section-header {
+    padding: 2.6042vw 1.0417vw 0 1.0417vw;
+    background: #fff;
+    margin-bottom: 2.0833vw;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.1250vw;
+    gap: -0.02vw;
+}
+
+.site-title {
+    font-family: 'Oswald', sans-serif;
+    color: #C45481;
+    font-size: 2.5000vw;
+    font-weight: 300;
+    text-decoration: underline;
+    text-underline-offset: 0.2604vw;
+    padding: 0 0 1.0417vw 0;
+}
+
+.mini-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.mini-nav a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: #C45481;
+    text-decoration: none;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.page-title-svg {
+    width: 37.3438vw;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5625vw;
+    margin-bottom: 0.5208vw;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 2.8646vw;
+    align-items: center;
+}
+
+.view-icon {
+    width: 9.7917vw;
+    height: 9.7917vw;
+    cursor: pointer;
+}
+
+/* Header Overlay for Home Page */
+.section-header.home-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    margin-bottom: 0;
+    z-index: 100;
+    padding-top: 2.6042vw;
+}
+
+.home-header-overlay .site-title {
+    color: #C45481;
+    text-shadow: none;
+}
+
+.home-header-overlay .mini-nav a {
+    color: #C45481;
+}
+
+/* ===========================================
+   6. HERO SECTION (HOME)
+   =========================================== */
+.section.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin-top: 0;
+    background: #000;
+    overflow: hidden;
+    color: #fff;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 140px;
+    left: 47px;
+    z-index: 10;
+}
+
+.hero-title-list li {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.5rem;
+    line-height: 0.85;
+    color: #AA0C1C;
+    opacity: 0.9;
+    letter-spacing: -1px;
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: default;
+    margin-bottom: 7px;
+}
+
+.hero-title-list li.active {
+    opacity: 1;
+}
+
+.hero-title-list li span {
+    font-family: 'Oswald', sans-serif;
+    color: #ECECEC;
+    opacity: 0.67;
+    font-size: 17px;
+    vertical-align: super;
+    margin-left: 8px;
+    letter-spacing: 0;
+    position: relative;
+    top: -5px;
+}
+
+.hero-title-list li:hover {
+    transform: translateX(1.0417vw);
+}
+
+/* Hero Slider */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero-slide.prev {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Hero Progress Bar */
+.hero-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 20;
+}
+
+.hero-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #AA0C1C;
+    transition: width 0.1s linear;
+}
+
+/* ===========================================
+   7. PLACEHOLDERS & CARDS
+   =========================================== */
+.placeholder-img {
+    background-color: #e5e5e5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.7292vw;
+    overflow: hidden;
+}
+
+.ph-text {
+    z-index: 1;
+}
+
+.rect-large {
+    width: 48.9062vw;
+    height: 29.8958vw;
+    border-radius: 0.4688vw;
+}
+
+.rect-small {
+    width: 26.1979vw;
+    height: 17.4479vw;
+}
+
+/* ===========================================
+   8. SECTIONS (General)
+   =========================================== */
+.section {
+    margin-top: 7.7083vw;
+    margin-bottom: 0;
+}
+
+/* ===========================================
+   9. ALL FILMS SECTION (Home)
+   =========================================== */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 48.9062vw);
+    gap: 0.3125vw;
+    justify-content: center;
+}
+
+.card-info {
+    margin-top: 0.7812vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5208vw;
+    font-size: 1.6667vw;
+    font-weight: 300;
+    font-family: 'Oswald', sans-serif;
+    color: #000000;
+}
+
+/* ===========================================
+   10. NOTES CAROUSEL
+   =========================================== */
+.notes-carousel {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1.0417vw;
+    scrollbar-width: none;
+}
+
+.notes-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1.0417vw;
+    width: max-content;
+    padding-right: 2.0833vw;
+}
+
+.carousel-item {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.slide-img {
+    display: block;
+    width: 54.0625vw;
+    height: 39.0625vw;
+    object-fit: cover;
+    border-radius: 0.4688vw;
+}
+
+/* ===========================================
+   11. COLLECTIONS CONTAINER (Home)
+   =========================================== */
+.collections-container {
+    display: flex;
+    min-height: 31.2500vw;
+}
+
+.pink-card {
+    background-color: #EC71DA;
+    flex: 1.2;
+    padding: 1.5625vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.4688vw;
+}
+
+.role-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2500vw;
+    font-weight: 300;
+    margin-bottom: 1.0417vw;
+    display: block;
+}
+
+.name-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 8.3333vw;
+    font-weight: 400;
+    line-height: 100%;
+    color: #000;
+}
+
+.photo-card {
+    flex: 1;
+    background: #000;
+}
+
+.portrait {
+    height: 100%;
+    width: 100%;
+    min-height: 26.0417vw;
+}
+
+/* ===========================================
+   12. AWARD WINNERS
+   =========================================== */
+.grid-4-col {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.0417vw;
+    padding-bottom: 1.0417vw;
+    scrollbar-width: none;
+}
+
+.grid-4-col::-webkit-scrollbar {
+    display: none;
+}
+
+.card-caption {
+    margin-top: 0.5208vw;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6667vw;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ===========================================
+   13. ABOUT SECTION
+   =========================================== */
+.section.about {
+    margin-top: 7.7083vw;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1.5fr;
+    gap: 1.0417vw;
+    border-top: none;
+    padding-top: 2.0833vw;
+}
+
+.about-card {
+    border: 0.0521vw solid #EAEAEA;
+    border-radius: 0.4688vw;
+    padding: 1.5625vw;
+    height: 20.8333vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.about-card h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8333vw;
+    font-weight: 700;
+    margin-bottom: 1.0417vw;
+    text-transform: uppercase;
+}
+
+.card-bottom {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7292vw;
+    font-weight: 500;
+    color: #000;
+}
+
+.vertical-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4167vw;
+}
+
+.vertical-links a {
+    text-decoration: underline;
+    text-underline-offset: 0.2083vw;
+}
+
+.mean-content p {
+    font-size: 0.6771vw;
+    line-height: 1.5;
+    color: #111;
+    margin-bottom: 0.6250vw;
+}
+
+.mean-content strong {
+    font-weight: 700;
+}
+
+.kr-desc {
+    color: #333;
+    font-size: 0.6250vw;
+    margin-top: 0.5208vw;
+}
+
+.social-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7812vw;
+    height: 100%;
+}
+
+.social-row {
+    display: flex;
+    gap: 0.7812vw;
+    flex: 1;
+}
+
+.social-card {
+    flex: 1;
+    border: 0.0521vw solid #EAEAEA;
+    border-radius: 0.4688vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6667vw;
+    color: #000;
+    transition: background 0.2s;
+    cursor: pointer;
+    background: #fff;
+}
+
+.social-card:hover {
+    background: #f9f9f9;
+}
+
+/* ===========================================
+   14. FOOTER
+   =========================================== */
+.main-footer {
+    padding: 7.8125vw 0 1.1458vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.men-svg {
+    height: 28.1250vw;
+    width: auto;
+    display: block;
+}
+
+.footer-pill {
+    width: 23.4375vw;
+    height: 28.1250vw;
+    border-radius: 5.2083vw;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 36.0417vw;
+    margin: 0;
+    transform: none;
+}
+
+.footer-img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===========================================
+   15. ALL FILMS PAGE
+   =========================================== */
+
+/* Hotgirls Grid (3-Column Masonry) */
+.hotgirls-three-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.2083vw;
+    padding: 0 1.0417vw;
+    gap: 1.0417vw;
+}
+
+.hg-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0417vw;
+    flex: 534;
+    min-width: 0;
+}
+
+.hg-col.center {
+    flex: 775;
+}
+
+.hg-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.portrait-tall {
+    aspect-ratio: 534 / 771;
+    height: auto;
+}
+
+.landscape {
+    aspect-ratio: 534 / 400;
+    height: auto;
+}
+
+.hg-col.center .landscape {
+    aspect-ratio: 775 / 400;
+}
+
+.hg-item .placeholder-img {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 0.7292vw;
+    object-fit: cover;
+}
+
+.hg-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 9px;
+}
+
+.hg-caption {
+    position: absolute;
+    bottom: 0.5208vw;
+    left: 0.5208vw;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.6250vw;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.1042vw 0.2604vw;
+}
+
+/* AllFilms Grid */
+.allfilms-grid-sec {
+    margin-bottom: 5.2083vw;
+}
+
+.films-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.0417vw;
+    row-gap: 7.0312vw;
+    margin-top: 1.0417vw;
+}
+
+.film-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2604vw;
+}
+
+.film-card .placeholder-img {
+    height: 19.9479vw;
+    background: #e5e5e5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4688vw;
+}
+
+.film-card .rect-small {
+    width: 100%;
+}
+
+.film-title {
+    font-family: 'Oswald';
+    font-size: 1.6667vw;
+    font-weight: light;
+    text-transform: uppercase;
+}
+
+/* Text List Section */
+.text-list-sec {
+    position: relative;
+    padding: 0;
+    margin-bottom: 5.2083vw;
+}
+
+.large-text-list {
+    list-style: none;
+    margin-bottom: 2.0833vw;
+}
+
+.large-text-list li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6.6667vw;
+    font-weight: 500;
+    line-height: 0.9;
+    color: #2B2929;
+    cursor: pointer;
+    transition: color 0.2s;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.0417vw;
+    position: relative;
+    z-index: 2;
+}
+
+.large-text-list li:hover {
+    color: #000;
+}
+
+.large-text-list li sup {
+    font-size: 1.2500vw;
+    font-weight: 500;
+    color: #2B2929;
+    vertical-align: super;
+    margin-left: 0.5208vw;
+}
+
+.show-more {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6667vw;
+    font-weight: 500;
+    margin-top: 1.5625vw;
+    cursor: pointer;
+    color: #2B2929;
+    display: flex;
+    align-items: center;
+    gap: 0.5208vw;
+    position: relative;
+    z-index: 2;
+}
+
+.plus-icon {
+    font-size: 2.0833vw;
+    font-weight: 300;
+    line-height: 0.8;
+}
+
+.list-hover-img {
+    position: absolute;
+    top: 50%;
+    right: 1.0417vw;
+    transform: translateY(-50%);
+    width: 57.292vw;
+    height: auto;
+    aspect-ratio: 1100 / 860;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-hover-img .placeholder-img {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    object-fit: cover;
+}
+
+/* Hidden class */
+.hidden {
+    display: none !important;
+}
+
+/* List View Styles */
+#view-list {
+    width: 100%;
+    margin-bottom: 5.2083vw;
+}
+
+.list-view-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.list-row {
+    display: flex;
+    align-items: center;
+    padding: 1.5625vw 0;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.list-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-col.title {
+    flex: 2;
+    margin-right: 42.7083vw;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6042vw;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: #000;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.list-col.meta {
+    flex: 1;
+    gap: 5px;
+}
+
+.list-col.meta .label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9vw;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: normal;
+}
+
+.list-col.meta .value {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7vw;
+    font-weight: 200;
+    color: #000;
+    line-height: normal;
+}
+
+/* Cursor Follow Image */
+#cursor-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: auto;
+    aspect-ratio: 2/3;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#cursor-img .placeholder-img {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1vw;
+}
+
+/* ===========================================
+   16. COLLECTIONS PAGE
+   =========================================== */
+
+/* Collections Page Theme (Green) */
+body.collections-page .site-title {
+    color: #90FC82;
+}
+
+body.collections-page .mini-nav a {
+    color: #90FC82;
+}
+
+body.collections-page .section-subtitle {
+    color: #EB3DF7;
+}
+
+/* Navigation hover effect for collections */
+body.collections-page .mini-nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+body.collections-page .top-nav:hover .mini-nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Collections Page SVG Title */
+.page-title-svg-collections {
+    width: 49.2188vw;
+    height: auto;
+    margin: 0;
+    display: block;
+}
+
+/* Collections List */
+.collections-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7.8125vw;
+    margin-bottom: 7.8125vw;
+}
+
+.collection-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    gap: 2.6042vw;
+}
+
+.collection-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.col-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col-image {
+    width: 46.0417vw;
+    flex: 0 0 auto;
+}
+
+.col-image .collection-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.col-kicker {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7292vw;
+    color: #999;
+    margin-bottom: 1.0417vw;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.col-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 160;
+    font-size: 8.3333vw;
+    line-height: 7.2917vw;
+    color: #2B2929;
+    margin-bottom: 1.5625vw;
+}
+
+.col-title.align-right {
+    text-align: right;
+}
+
+.col-text.right {
+    align-items: flex-end;
+}
+
+.read-more {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8333vw;
+    color: #000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5208vw;
+    text-transform: uppercase;
+    margin-top: 1.0417vw;
+}
+
+.read-more .arrow {
+    font-size: 1vw;
+}
+
+/* Media query for collections */
+@media (max-width: 1400px) {
+    .col-title {
+        font-size: 116.67px;
+        line-height: 102.08px;
+    }
+
+    .col-image {
+        flex: 0 0 644.58px;
+        width: 644.58px;
+        min-width: 644.58px;
+        aspect-ratio: 884 / 730;
+    }
+}
+
+/* ===========================================
+   17. SEAN BAKER DETAIL PAGE
+   =========================================== */
+.sb-header-title {
+    width: 100vw;
+    margin-left: -1.0417vw;
+    margin-bottom: 2vw;
+    padding: 0;
+    line-height: 0;
+}
+
+.sb-header-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sb-grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.sb-grid-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5vw;
+}
+
+.sb-grid-caption {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6667vw;
+    font-weight: 300;
+    color: #000;
+    font-style: normal;
+    margin-top: 0.5vw;
+}
+
+@media (max-width: 1400px) {
+    .sb-grid-caption {
+        font-size: 23.33px;
+    }
+}
+
+/* Sean Baker page masonry adjustments */
+.sb-content .portrait-tall {
+    aspect-ratio: auto;
+    height: auto;
+}
+
+.sb-content .landscape {
+    aspect-ratio: auto;
+    height: auto;
+}
+
+.sb-content .hg-col.center .landscape {
+    aspect-ratio: auto;
+}
+
+.sb-content .hotgirls-three-columns {
+    padding: 0;
+}
+
+/* ===========================================
+   18. FILM DETAIL PAGE
+   =========================================== */
+
+/* Film Header */
+.film-header {
+    padding: 1.0417vw;
+    text-align: center;
+    margin-bottom: 2.0833vw;
+}
+
+.film-header .site-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.8333vw;
+    color: #4a4a4a;
+    text-decoration: underline;
+    text-underline-offset: 0.2083vw;
+    display: block;
+    margin-bottom: 0.2604vw;
+}
+
+.header-meta {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.6250vw;
+    color: #f1c40f;
+    display: flex;
+    justify-content: center;
+    gap: 0.5208vw;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+/* Film Hero Section */
+.film-hero {
+    position: relative;
+    margin-bottom: 3.1250vw;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text-overlay {
+    position: absolute;
+    top: 15%;
+    left: 4.1667vw;
+}
+
+.main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6.2500vw;
+    line-height: 0.85;
+    color: #1a2a44;
+    letter-spacing: -0.02em;
+}
+
+.hero-icons {
+    position: absolute;
+    bottom: 1.0417vw;
+    left: 1.0417vw;
+    display: flex;
+    gap: 0.5208vw;
+    font-size: 1.2500vw;
+}
+
+/* Film Intro Section */
+.section.film-intro {
+    margin-bottom: 4.1667vw;
+}
+
+.intro-grid {
+    display: flex;
+    gap: 2.0833vw;
+}
+
+.poster-area {
+    flex: 1;
+}
+
+.film-poster {
+    width: 100%;
+    max-width: 15.6250vw;
+    display: block;
+}
+
+.synopsis-area {
+    flex: 2;
+    padding-top: 1.0417vw;
+}
+
+.arrow-icon svg {
+    width: 2.0833vw;
+    height: auto;
+    margin-bottom: 1.0417vw;
+}
+
+.synopsis-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7292vw;
+    line-height: 1.6;
+    max-width: 20.8333vw;
+    margin-bottom: 2.0833vw;
+    color: #000;
+}
+
+.intro-credits {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2500vw;
+    color: #000;
+}
+
+/* Review Banner */
+.section.review-banner {
+    position: relative;
+    margin-bottom: 4.1667vw;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2500vw;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.banner-quote .source {
+    display: block;
+    margin-top: 0.5208vw;
+    font-size: 0.7292vw;
+    font-family: serif;
+    font-style: italic;
+}
+
+/* Director Spotlight */
+.section.director-spotlight {
+    background-color: #2c3e50;
+    margin-bottom: 4.1667vw;
+    display: flex;
+}
+
+.director-grid {
+    display: flex;
+    width: 100%;
+}
+
+.director-img {
+    flex: 1;
+    position: relative;
+}
+
+.bw-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+}
+
+.director-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 2.0833vw;
+    background-color: #3f4c6b;
+}
+
+.director-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5.2083vw;
+    line-height: 0.9;
+    color: #1a1a1a;
+}
+
+/* Film Gallery */
+.section.film-gallery {
+    margin-bottom: 4.1667vw;
+}
+
+.gallery-header {
+    display: flex;
+    align-items: center;
+    gap: 1.0417vw;
+    margin-bottom: 1.0417vw;
+}
+
+.gallery-header h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5625vw;
+    margin: 0;
+}
+
+.gallery-header svg {
+    width: 1.5625vw;
+    height: auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.0417vw;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Film List Vertical */
+.section.film-list-vertical {
+    position: relative;
+    padding: 3.1250vw 0;
+    margin-bottom: 5.2083vw;
+}
+
+.list-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.1250vw;
+    margin-bottom: 1.0417vw;
+    line-height: 1;
+}
+
+.films-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.films-menu li {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.0833vw;
+    color: #333;
+    margin-bottom: 0.5208vw;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.films-menu li:hover,
+.films-menu li.active {
+    opacity: 1;
+}
+
+.films-menu li.active {
+    font-size: 2.6042vw;
+    color: #000;
+}
+
+.section.film-list-vertical .show-more {
+    margin-top: 1.5625vw;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7292vw;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.list-image-overlay {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.list-image-overlay img {
+    width: 100%;
+    height: auto;
+}
+
+/* ===========================================
+   19. MOBILE RESPONSIVE
+   =========================================== */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 10vw;
+    }
+
+    .intro-grid,
+    .director-grid {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .film-poster {
+        max-width: 50%;
+    }
+
+    .synopsis-text {
+        max-width: 100%;
+    }
+}
+
+/* ===========================================
+   20. ALL FILMS SWIPER (Home Page)
+   =========================================== */
+.allfilms-swiper-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.allfilms-swiper {
+    width: 100%;
+    overflow: visible;
+}
+
+.allfilms-swiper .swiper-wrapper {
+    display: flex;
+}
+
+.allfilms-swiper .swiper-slide {
+    width: 48.9062vw;
+    flex-shrink: 0;
+}
+
+.allfilms-swiper .swiper-slide .card {
+    width: 100%;
+}
+
+/* Swiper Navigation Areas */
+.swiper-nav-prev,
+.swiper-nav-next {
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 10;
+    cursor: none;
+}
+
+.swiper-nav-prev {
+    left: 0;
+}
+
+.swiper-nav-next {
+    right: 0;
+}
+
+/* Arrow Cursor Styles */
+.custom-cursor.cursor-left {
+    background-image: url('../images/svg/cursor_pink.svg');
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.custom-cursor.cursor-right {
+    background-image: url('../images/svg/cursor_pink.svg');
+    transform: translate(-50%, -50%) rotate(0deg);
+}
