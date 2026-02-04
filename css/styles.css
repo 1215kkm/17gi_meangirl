@@ -484,11 +484,12 @@ body.collections-page .custom-cursor {
    =========================================== */
 .section.about {
     margin-top: 7.7083vw;
+    padding: 0 2vw;
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1.5fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.0417vw;
     border-top: none;
     padding-top: 2.0833vw;
@@ -498,7 +499,6 @@ body.collections-page .custom-cursor {
     border: 0.0521vw solid #EAEAEA;
     border-radius: 0.4688vw;
     padding: 1.5625vw;
-    height: 20.8333vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -507,7 +507,7 @@ body.collections-page .custom-cursor {
 
 .about-card h4 {
     font-family: 'Oswald', sans-serif;
-    font-size: 0.8333vw;
+    /* font-size: 0.8333vw; */
     font-weight: 700;
     margin-bottom: 1.0417vw;
     text-transform: uppercase;
@@ -515,7 +515,7 @@ body.collections-page .custom-cursor {
 
 .card-bottom {
     font-family: 'Oswald', sans-serif;
-    font-size: 0.7292vw;
+    /* font-size: 0.7292vw; */
     font-weight: 500;
     color: #000;
 }
@@ -532,10 +532,9 @@ body.collections-page .custom-cursor {
 }
 
 .mean-content p {
-    font-size: 0.6771vw;
     line-height: 1.5;
     color: #111;
-    margin-bottom: 0.6250vw;
+    margin-bottom: 1.5vw;
 }
 
 .mean-content strong {
@@ -544,7 +543,6 @@ body.collections-page .custom-cursor {
 
 .kr-desc {
     color: #333;
-    font-size: 0.6250vw;
     margin-top: 0.5208vw;
 }
 
@@ -583,7 +581,7 @@ body.collections-page .custom-cursor {
    14. FOOTER
    =========================================== */
 .main-footer {
-    padding: 7.8125vw 0 1.1458vw;
+    /* padding: 7.8125vw 0 1.1458vw; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -605,7 +603,7 @@ body.collections-page .custom-cursor {
     display: block;
 }
 
-.footer-pill {
+.docs .footer-pill {
     width: 23.4375vw;
     height: 28.1250vw;
     border-radius: 5.2083vw;
@@ -1484,7 +1482,6 @@ body.detail-page {
 }
 
 body.detail-page .site-title {
-    color: #334671;
     font-size: 2.5vw;
 }
 
@@ -1494,7 +1491,7 @@ body.detail-page .site-title {
     flex-direction: column;
     align-items: center;
     padding-top: 2.5vw;
-    gap: 8vw;
+    gap: 2vw;
 }
 
 .detail-nav {
@@ -1506,12 +1503,15 @@ body.detail-page .site-title {
     font-family: 'Oswald', sans-serif;
     font-size: 0.9375vw;
     font-weight: 400;
-    color: #334671;
+    color: #C45481;
     text-decoration: none;
 }
 
 .detail-nav a.active {
-    color: #2b2929;
+    color: #fff;
+}
+.detail-nav a:hover {
+    color: #fff;
 }
 
 /* Detail Hero */
@@ -1523,9 +1523,6 @@ body.detail-page .site-title {
 }
 
 .detail-hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -1538,16 +1535,19 @@ body.detail-page .site-title {
 }
 
 .detail-hero-content {
-    position: relative;
+    position: absolute;
     z-index: 10;
     height: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    top: 0;
 }
+
 
 .detail-title-area {
     position: absolute;
-    bottom: 20vw;
+    top: 18vw;
     left: 1.0417vw;
 }
 
@@ -1601,18 +1601,19 @@ body.detail-page .site-title {
     color: #aa0c1c;
     text-align: left;
     line-height: 1;
+    text-align: center;
 }
 
 /* Detail Info Section */
 .detail-info-section {
     background: #fff;
-    padding: 5.2083vw 1.0417vw;
+    padding: 5vw 4vw;
 }
 
 .detail-info-grid {
     display: grid;
-    grid-template-columns: 24.4792vw auto 24.1146vw 24.1146vw;
-    gap: 2vw;
+    grid-template-columns: 24.4792vw auto 24.1146vw;
+    gap: 5vw;
     align-items: start;
 }
 
@@ -1627,7 +1628,9 @@ body.detail-page .site-title {
 }
 
 .detail-arrow-icon {
-    padding-top: 2vw;
+    top:-70px;
+    position: absolute;
+    left: -50px;
 }
 
 .detail-arrow-icon img {
@@ -1642,9 +1645,11 @@ body.detail-page .site-title {
     color: #000;
     margin: 0 0 1vw 0;
     padding-bottom: 0.5vw;
-    border-bottom: 1px solid #000;
+    border-bottom: 5px solid #F1F1F1;
 }
-
+.detail-synopsis {
+    position: relative;
+}
 .detail-synopsis p {
     font-family: 'Oswald', sans-serif;
     font-size: 1.3021vw;
@@ -1655,18 +1660,20 @@ body.detail-page .site-title {
 }
 
 .detail-awards {
-    margin-top: 2vw;
+    margin-top: 6vw;
 }
 
 .award-item {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    align-items: start;
     gap: 1vw;
-    margin-bottom: 1vw;
+    margin-bottom: 6vw;
 }
 
 .award-item img {
-    width: 3vw;
+    /* width: 3vw; */
     height: auto;
 }
 
@@ -1692,7 +1699,6 @@ body.detail-page .site-title {
 }
 
 .detail-credits {
-    padding-top: 1vw;
 }
 
 .credits-list {
@@ -1728,13 +1734,9 @@ body.detail-page .site-title {
 .detail-quote-banner {
     position: relative;
     width: 100%;
-    height: 61.6667vw;
 }
 
 .quote-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -1747,11 +1749,12 @@ body.detail-page .site-title {
 }
 
 .quote-text {
-    position: absolute;
-    top: 50%;
-    left: 34.1146vw;
-    transform: translateY(-50%);
-    margin: 0;
+    margin-top: 14vw;
+    width: 50%;
+
+}
+.quote-text img {
+width: 100%;
 }
 
 .quote-text p {
@@ -1765,7 +1768,6 @@ body.detail-page .site-title {
 }
 
 .quote-icon {
-    position: absolute;
     right: -5vw;
     top: 0;
 }
@@ -1774,11 +1776,12 @@ body.detail-page .site-title {
 .detail-director-section {
     display: flex;
     width: 100%;
+    margin-top: 10vw;
 }
 
 .director-image {
-    flex: 1;
     margin: 0;
+    width: 50%;
 }
 
 .director-image img {
@@ -1789,13 +1792,14 @@ body.detail-page .site-title {
 }
 
 .director-info {
-    flex: 1;
+    width: 50%;
     background: #ec71da;
     border-radius: 0 0.4688vw 0.4688vw 0;
-    padding: 3vw;
+    padding: 3vw 3vw 10vw 3vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
+    align-items: start;
 }
 
 .director-label {
@@ -1839,9 +1843,16 @@ body.detail-page .site-title {
     margin: 0 0 1.0417vw 0;
 }
 
+.gallery-box {display: flex;}
+
 .gallery-row {
     display: flex;
     gap: 0.2604vw;
+    position: relative;
+}
+.gallery-row .detail-wishlist {
+    z-index: 5;
+    bottom: 30px;
 }
 
 .gallery-item {
@@ -1850,11 +1861,11 @@ body.detail-page .site-title {
     margin: 0;
 }
 
-.gallery-item.large {
+/* .gallery-item.large {
     border-radius: 0.4688vw;
     overflow: hidden;
     box-shadow: 0 0.2083vw 0.2083vw rgba(0, 0, 0, 0.25);
-}
+} */
 
 .gallery-item img {
     width: 100%;
@@ -1888,11 +1899,11 @@ body.detail-page .site-title {
     display: flex;
     align-items: center;
     gap: 1vw;
-    margin-top: 2vw;
+    position: relative;
 }
 
 .gallery-expand img {
-    width: 3vw;
+    width: 100%;
     height: auto;
 }
 
@@ -1900,7 +1911,9 @@ body.detail-page .site-title {
     font-family: 'Oswald', sans-serif;
     font-size: 1.4583vw;
     font-weight: 300;
-    color: #fff;
+    color: #fff; position: absolute;
+    left: 10px;
+    bottom: 20px;
 }
 
 /* Film List Section */
@@ -1938,6 +1951,9 @@ body.detail-page .site-title {
     letter-spacing: 0.14em;
     vertical-align: super;
     margin-left: 0.5vw;
+    position: relative;
+    left: -10px;
+    top: -20px;
 }
 
 .show-more-btn {
@@ -1969,25 +1985,24 @@ body.detail-page .site-title {
 
 .footer-text-logo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 40.1042vw;
-    line-height: 0.2;
     color: #2b2929;
+    display: flex;
+    gap: 3vw;
+    margin-top: 10vw;
+    margin-bottom: 20px;
 }
+.footer-text-logo span img {width: 100%;}
 
 .detail-footer .footer-pill {
-    position: absolute;
-    width: 21.5625vw;
-    height: 28.0729vw;
     border-radius: 50vw;
     overflow: hidden;
-    top: -10vw;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
 }
+/* .footer-text-logo img {height: 100%;} */
 
 .footer-caption {
     position: absolute;
-    bottom: 13vw;
+    top: 50%;
     left: 3vw;
     color: #eb3df7;
 }
@@ -2013,7 +2028,6 @@ body.detail-page .site-title {
 
 /* Docs Header */
 .docs-header {
-    background-color: #FFE642;
     padding: 2.5vw 1.0417vw;
 }
 
@@ -2021,7 +2035,7 @@ body.detail-page .site-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4.4792vw;
+    gap: 1vw;
 }
 
 .docs-nav .site-title {
