@@ -2028,7 +2028,6 @@ width: 100%;
 
 /* Docs Header */
 .docs-header {
-    background-color: #FFE642;
     padding: 2.5vw 1.0417vw;
 }
 
@@ -2036,7 +2035,7 @@ width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4.4792vw;
+    gap: 1vw;
 }
 
 .docs-nav .site-title {
