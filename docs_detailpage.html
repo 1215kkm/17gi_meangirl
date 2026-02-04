@@ -12,8 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
-<body class="docs-detail-page">
+<body class="docs-detail-page" data-lang="en">
     <div class="custom-cursor"></div>
+
+    <!-- Language Toggle -->
+    <nav class="lang-toggle">
+        <button class="lang-btn" id="btn-ko" onclick="setLang('ko')" title="한국어">🇰🇷</button>
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')" title="English">🇺🇸</button>
+    </nav>
 
     <main id="app">
         <!-- Hero Section -->
@@ -36,7 +42,8 @@
         <section class="docs-detail-intro">
             <div class="docs-detail-meta">
                 <time class="docs-detail-date">JAN 26, 2026</time>
-                <h1 class="docs-detail-title">The Film Everyone Is Arguing About: Sirat</h1>
+                <h1 class="docs-detail-title lang-en">The Film Everyone Is Arguing About: Sirat</h1>
+                <h1 class="docs-detail-title lang-ko">모두가 논쟁하는 영화: 시라트</h1>
             </div>
         </section>
 
@@ -47,151 +54,313 @@
             </div>
 
             <div class="docs-detail-body">
-                <p class="docs-detail-author">Eun-seon Lee, Film Journalist (sisa@sisajournal.com)</p>
+                <!-- EN: Author -->
+                <p class="docs-detail-author lang-en">Eun-seon Lee, Film Journalist (sisa@sisajournal.com)</p>
+                <!-- KO: Author -->
+                <p class="docs-detail-author lang-ko">이은선, 영화 저널리스트 (sisa@sisajournal.com)</p>
 
-                <h2 class="docs-detail-subtitle">A Journey of Adventure Filmed in the Desert-<br>The Spectacle of Cinema Revealed by the "Real"</h2>
+                <!-- EN: Subtitle -->
+                <h2 class="docs-detail-subtitle lang-en">A Journey of Adventure Filmed in the Desert-<br>The Spectacle of Cinema Revealed by the "Real"</h2>
+                <!-- KO: Subtitle -->
+                <h2 class="docs-detail-subtitle lang-ko">사막에서 촬영된 모험의 여정-<br>"리얼"이 드러내는 영화의 스펙터클</h2>
 
-                <p class="docs-detail-text">
-                    Philosopher Friedrich Nietzsche once declared, "I would believe only in a god who could dance."
-                    It was a paradoxical way of saying that only what affirms human freedom can become a true form of faith.
-                    By that logic, how should we understand the god who chooses the dancers that fill Sirat?
-                    Winner of the Jury Prize at the 78th Cannes Film Festival,
-                    the film also claimed another trophy: Best Soundtrack.
-                    This award recognizes the cinematic achievement forged
-                    by the experimental music that echoes across the desert.
-                    In the film, that music becomes nothing less than an electronic requiem -
-                    a lament that consoles the death and despair drifting through the vast sands.
-                    God and music, human fate and the desert. Somewhere in between them stands Sirat,
-                    a film that has stunned audiences around the world since its first screening in Cannes.
-                </p>
+                <!-- EN: Intro -->
+                <div class="lang-en">
+                    <p class="docs-detail-text">
+                        Philosopher Friedrich Nietzsche once declared, "I would believe only in a god who could dance."
+                        It was a paradoxical way of saying that only what affirms human freedom can become a true form of faith.
+                        By that logic, how should we understand the god who chooses the dancers that fill Sirat?
+                        Winner of the Jury Prize at the 78th Cannes Film Festival,
+                        the film also claimed another trophy: Best Soundtrack.
+                        This award recognizes the cinematic achievement forged
+                        by the experimental music that echoes across the desert.
+                        In the film, that music becomes nothing less than an electronic requiem -
+                        a lament that consoles the death and despair drifting through the vast sands.
+                        God and music, human fate and the desert. Somewhere in between them stands Sirat,
+                        a film that has stunned audiences around the world since its first screening in Cannes.
+                    </p>
+                </div>
+                <!-- KO: Intro -->
+                <div class="lang-ko">
+                    <p class="docs-detail-text">
+                        철학자 프리드리히 니체는 한때 "춤출 수 있는 신만을 믿겠다"고 선언했다.
+                        인간의 자유를 긍정하는 것만이 진정한 신앙의 형태가 될 수 있다는 역설적 표현이었다.
+                        그렇다면 시라트를 가득 채우는 춤꾼들을 선택하는 신은 어떻게 이해해야 할까?
+                        제78회 칸 영화제 심사위원상 수상작인 이 영화는 또 다른 트로피인 최우수 사운드트랙상도 거머쥐었다.
+                        이 상은 사막 위로 울려 퍼지는 실험적 음악이 빚어낸 영화적 성취를 인정한 것이다.
+                        영화 속에서 그 음악은 광활한 모래사장을 떠도는 죽음과 절망을 위로하는
+                        일렉트로닉 레퀴엠, 그 이상도 이하도 아니다.
+                        신과 음악, 인간의 운명과 사막. 그 사이 어딘가에 시라트가 서 있다.
+                        칸에서의 첫 상영 이후 전 세계 관객을 경악시킨 영화.
+                    </p>
+                </div>
 
-                <h3 class="docs-detail-heading">People Who Keep Dancing at the End of the World</h3>
+                <!-- EN: Section 1 -->
+                <h3 class="docs-detail-heading lang-en">People Who Keep Dancing at the End of the World</h3>
+                <!-- KO: Section 1 -->
+                <h3 class="docs-detail-heading lang-ko">세상의 끝에서도 춤을 멈추지 않는 사람들</h3>
 
-                <p class="docs-detail-text">
-                    Sirat refers, in Islam, to the bridge that connects this world to the afterlife.
-                    The film opens with a chilling warning tied to that place:
-                    "Let those who seek to cross beware.
-                    The path is thinner than a strand of hair and sharper than the edge of a blade."
-                    As the frailty of humanity - so earnestly reaching for salvation - begins to feel almost awkward,
-                    the screen soon opens onto a vast desert, clouds of dust rising into the air.
-                    Amid the frantic movements of workers hauling and stacking massive, heavy objects,
-                    the imposing presence of giant speakers slowly comes into view.
-                </p>
+                <!-- EN -->
+                <div class="lang-en">
+                    <p class="docs-detail-text">
+                        Sirat refers, in Islam, to the bridge that connects this world to the afterlife.
+                        The film opens with a chilling warning tied to that place:
+                        "Let those who seek to cross beware.
+                        The path is thinner than a strand of hair and sharper than the edge of a blade."
+                        As the frailty of humanity - so earnestly reaching for salvation - begins to feel almost awkward,
+                        the screen soon opens onto a vast desert, clouds of dust rising into the air.
+                        Amid the frantic movements of workers hauling and stacking massive, heavy objects,
+                        the imposing presence of giant speakers slowly comes into view.
+                    </p>
+                </div>
+                <!-- KO -->
+                <div class="lang-ko">
+                    <p class="docs-detail-text">
+                        시라트는 이슬람에서 현세와 내세를 잇는 다리를 가리킨다.
+                        영화는 그 장소에 얽힌 소름 끼치는 경고로 시작된다:
+                        "건너고자 하는 자는 조심하라.
+                        그 길은 머리카락보다 가늘고 칼날보다 날카롭다."
+                        구원을 향해 간절히 손을 뻗는 인간의 나약함이 어색하게 느껴질 무렵,
+                        화면은 곧 광활한 사막으로 전환되고, 먼지 구름이 허공으로 솟아오른다.
+                        거대하고 무거운 물건을 옮기고 쌓는 노동자들의 분주한 움직임 사이로,
+                        거대한 스피커의 위풍당당한 존재감이 서서히 모습을 드러낸다.
+                    </p>
+                </div>
 
                 <figure class="docs-detail-image">
                     <img src="./images/page/docs/docs_img1.png" alt="Desert Scene">
                 </figure>
 
-                <p class="docs-detail-text">
-                    From rows of speakers stacked against the backdrop of steep canyons, electronic music pours out -
-                    low, pounding beats that throb against the heart. It is the beginning of a party that goes on day and night.
-                    A rave is a gathering where people dance to electronic music in large spaces like warehouses or clubs.
-                    The ravers who embrace this culture and roam in pursuit of alternative communal living surrender themselves,
-                    as one character puts it, to "music not meant to be listened to, but to be danced to."
-                </p>
+                <!-- EN -->
+                <div class="lang-en">
+                    <p class="docs-detail-text">
+                        From rows of speakers stacked against the backdrop of steep canyons, electronic music pours out -
+                        low, pounding beats that throb against the heart. It is the beginning of a party that goes on day and night.
+                        A rave is a gathering where people dance to electronic music in large spaces like warehouses or clubs.
+                        The ravers who embrace this culture and roam in pursuit of alternative communal living surrender themselves,
+                        as one character puts it, to "music not meant to be listened to, but to be danced to."
+                    </p>
 
-                <p class="docs-detail-text">
-                    Sirat opens with the fastest and most effective passage between the movie theater and the desert rave.
-                    That is also why every raver in the film is played not by professional actors, but by real ravers.
-                    As crowds fall into ecstatic, self-forgetting movement - dancing freely to their own rhythms, day and night -
-                    two strangers who seem utterly out of place appear, and Sirat truly begins.
-                </p>
+                    <p class="docs-detail-text">
+                        Sirat opens with the fastest and most effective passage between the movie theater and the desert rave.
+                        That is also why every raver in the film is played not by professional actors, but by real ravers.
+                        As crowds fall into ecstatic, self-forgetting movement - dancing freely to their own rhythms, day and night -
+                        two strangers who seem utterly out of place appear, and Sirat truly begins.
+                    </p>
 
-                <p class="docs-detail-text">
-                    They are Luis (Sergi Lopez), who has come in search of his daughter who left home to attend a rave,
-                    and his young son Esteban (Bruno Nunez Arjona), who have wandered all the way here.
-                    While the party in the desert continues, the outside world begins to feel as though war has broken out.
-                    Lines of military transport vehicles carrying civilians heighten the atmosphere of unease.
-                    Still, neither the will to dance nor the determination to find family is easily broken.
-                    When a group led by Jade (Jade Oukid) breaks away from the convoy to head toward another desert rave,
-                    Luis and Esteban - having no other option - follow them.
-                    As the truck carrying them races through the wasteland with no clear destination,
-                    the radio broadcasts reports of civilians trying to cross borders and statements from international organizations.
-                    With the end of the world seemingly just inches away, they do not stop -
-                    even in a barren landscape where nothing but dust fills the air.
-                </p>
+                    <p class="docs-detail-text">
+                        They are Luis (Sergi Lopez), who has come in search of his daughter who left home to attend a rave,
+                        and his young son Esteban (Bruno Nunez Arjona), who have wandered all the way here.
+                        While the party in the desert continues, the outside world begins to feel as though war has broken out.
+                        Lines of military transport vehicles carrying civilians heighten the atmosphere of unease.
+                        Still, neither the will to dance nor the determination to find family is easily broken.
+                        When a group led by Jade (Jade Oukid) breaks away from the convoy to head toward another desert rave,
+                        Luis and Esteban - having no other option - follow them.
+                        As the truck carrying them races through the wasteland with no clear destination,
+                        the radio broadcasts reports of civilians trying to cross borders and statements from international organizations.
+                        With the end of the world seemingly just inches away, they do not stop -
+                        even in a barren landscape where nothing but dust fills the air.
+                    </p>
+                </div>
+                <!-- KO -->
+                <div class="lang-ko">
+                    <p class="docs-detail-text">
+                        가파른 협곡을 배경으로 늘어선 스피커에서 일렉트로닉 음악이 쏟아진다 -
+                        심장을 두드리는 낮고 강렬한 비트. 밤낮으로 이어지는 파티의 시작이다.
+                        레이브란 창고나 클럽 같은 넓은 공간에서 일렉트로닉 음악에 맞춰 춤추는 모임이다.
+                        이 문화를 받아들이고 대안적 공동생활을 추구하며 떠도는 레이버들은,
+                        한 등장인물의 말처럼, "듣기 위한 음악이 아닌, 춤추기 위한 음악"에 자신을 맡긴다.
+                    </p>
+
+                    <p class="docs-detail-text">
+                        시라트는 극장과 사막 레이브 사이의 가장 빠르고 효과적인 통로로 시작된다.
+                        영화 속 모든 레이버가 전문 배우가 아닌 실제 레이버들로 출연하는 이유도 바로 그 때문이다.
+                        군중이 황홀경에 빠져 자아를 잊은 채 밤낮으로 자유롭게 춤출 때,
+                        완전히 어울리지 않는 두 명의 낯선 이가 나타나고, 시라트가 비로소 시작된다.
+                    </p>
+
+                    <p class="docs-detail-text">
+                        그들은 레이브에 참석하기 위해 집을 떠난 딸을 찾으러 온 루이스(세르지 로페즈)와
+                        그의 어린 아들 에스테반(브루노 누녜스 아르호나)이다.
+                        사막에서 파티가 계속되는 동안, 바깥세상은 마치 전쟁이 발발한 것처럼 느껴진다.
+                        민간인을 실은 군용 수송 차량의 행렬이 불안한 분위기를 고조시킨다.
+                        그래도 춤에 대한 의지도, 가족을 찾겠다는 결심도 쉽게 꺾이지 않는다.
+                        자드(자드 우키드)가 이끄는 무리가 호송대에서 이탈해 또 다른 사막 레이브로 향할 때,
+                        루이스와 에스테반은 - 다른 선택지가 없어 - 그들을 따라간다.
+                        그들을 태운 트럭이 목적지 없이 황무지를 질주하는 동안,
+                        라디오에서는 국경을 넘으려는 민간인들의 소식과 국제기구의 성명이 흘러나온다.
+                        세상의 끝이 바로 코앞인 듯한데도, 그들은 멈추지 않는다 -
+                        먼지만 가득한 황량한 풍경 속에서도.
+                    </p>
+                </div>
 
                 <figure class="docs-detail-image">
                     <img src="./images/page/docs/docs_img2.png" alt="Desert Journey">
                 </figure>
 
-                <p class="docs-detail-text">
-                    The desert of Sirat passes through the post-apocalyptic imagination embodied by the Mad Max series,
-                    yet becomes a nomads' realm that reconfigures the harshness of the Western into an entirely different landscape.
-                    It overwhelms not through grandeur or beauty, but through the opposite: an indifferent, boundless vastness.
-                    Its immensity is so extreme that it begins to feel almost like outer space.
-                    Within it, the characters' goals - to reach another rave, to find their family - slowly begin to fade.
-                    The desert road grows ever more treacherous, to the point of separating life from death,
-                    yet they keep moving forward. There is no other choice.
-                </p>
+                <!-- EN -->
+                <div class="lang-en">
+                    <p class="docs-detail-text">
+                        The desert of Sirat passes through the post-apocalyptic imagination embodied by the Mad Max series,
+                        yet becomes a nomads' realm that reconfigures the harshness of the Western into an entirely different landscape.
+                        It overwhelms not through grandeur or beauty, but through the opposite: an indifferent, boundless vastness.
+                        Its immensity is so extreme that it begins to feel almost like outer space.
+                        Within it, the characters' goals - to reach another rave, to find their family - slowly begin to fade.
+                        The desert road grows ever more treacherous, to the point of separating life from death,
+                        yet they keep moving forward. There is no other choice.
+                    </p>
+                </div>
+                <!-- KO -->
+                <div class="lang-ko">
+                    <p class="docs-detail-text">
+                        시라트의 사막은 매드맥스 시리즈가 구현한 포스트 아포칼립스적 상상력을 통과하면서도,
+                        서부극의 거칠음을 전혀 다른 풍경으로 재구성하는 유목민의 영역이 된다.
+                        웅장함이나 아름다움이 아닌, 그 반대편 - 무관심하고 끝없는 광활함으로 압도한다.
+                        그 광대함이 너무 극단적이어서 우주 공간처럼 느껴지기 시작한다.
+                        그 안에서 등장인물들의 목표 - 또 다른 레이브에 도달하기, 가족을 찾기 - 는 서서히 희미해진다.
+                        사막의 길은 점점 더 위험해져 삶과 죽음을 가르는 지경에 이르지만,
+                        그래도 그들은 계속 나아간다. 다른 선택이 없다.
+                    </p>
+                </div>
 
                 <figure class="docs-detail-image">
                     <img src="./images/page/docs/docs_img3.png" alt="Desert Landscape">
                 </figure>
 
-                <h3 class="docs-detail-heading">Confronting the Fragility of Life and a Cruel Fate</h3>
+                <!-- EN: Section 2 -->
+                <h3 class="docs-detail-heading lang-en">Confronting the Fragility of Life and a Cruel Fate</h3>
+                <!-- KO: Section 2 -->
+                <h3 class="docs-detail-heading lang-ko">삶의 나약함과 잔혹한 운명에 맞서다</h3>
 
-                <p class="docs-detail-text">
-                    As the journey continues, a loose sense of solidarity begins to form between Jade's group and Luis and his son.
-                    Even without any shared interests, the simple acts of sharing food and fuel,
-                    of offering compassion and help, become their oasis.
-                    The humanity they show by refusing to betray one another gives the audience a moment of reassurance.
-                    Though the characters' individual backstories are never fully spelled out,
-                    the bodies of the ravers - some missing arms or legs - begin to reveal the lives they have lived.
-                </p>
+                <!-- EN -->
+                <div class="lang-en">
+                    <p class="docs-detail-text">
+                        As the journey continues, a loose sense of solidarity begins to form between Jade's group and Luis and his son.
+                        Even without any shared interests, the simple acts of sharing food and fuel,
+                        of offering compassion and help, become their oasis.
+                        The humanity they show by refusing to betray one another gives the audience a moment of reassurance.
+                        Though the characters' individual backstories are never fully spelled out,
+                        the bodies of the ravers - some missing arms or legs - begin to reveal the lives they have lived.
+                    </p>
 
-                <p class="docs-detail-text">
-                    From this point on, however, director Oliver Laxe deliberately turns against the audience's expectations.
-                    A succession of tragedies, each defying prediction, comes crashing down with shocking force.
-                    The desert on which these people now stand -
-                    freed from all social and cultural systems that once surrounded them -
-                    becomes a testing ground where only two paths remain clear: life or death.
-                    Caught in the relentless pulse of the music, the roar of engines, and the threatening howl of the wind,
-                    the sudden arrival of silence becomes Sirat's most ultimate form of terror.
-                </p>
+                    <p class="docs-detail-text">
+                        From this point on, however, director Oliver Laxe deliberately turns against the audience's expectations.
+                        A succession of tragedies, each defying prediction, comes crashing down with shocking force.
+                        The desert on which these people now stand -
+                        freed from all social and cultural systems that once surrounded them -
+                        becomes a testing ground where only two paths remain clear: life or death.
+                        Caught in the relentless pulse of the music, the roar of engines, and the threatening howl of the wind,
+                        the sudden arrival of silence becomes Sirat's most ultimate form of terror.
+                    </p>
 
-                <p class="docs-detail-text">
-                    In the face of unrelenting suffering, everyone turns to God - yet neither recognition nor mercy appears.
-                    If a god does exist in Sirat, it is surely one that dispenses only merciless and cruel punishment.
-                    The characters become beings who have entrusted their fate to a roll of the dice,
-                    and the desert begins to resemble a vast purgatory that imprisons them.
-                    Only then does the truth sink in: this is a path thinner than a strand of hair and sharper than a blade.
-                </p>
+                    <p class="docs-detail-text">
+                        In the face of unrelenting suffering, everyone turns to God - yet neither recognition nor mercy appears.
+                        If a god does exist in Sirat, it is surely one that dispenses only merciless and cruel punishment.
+                        The characters become beings who have entrusted their fate to a roll of the dice,
+                        and the desert begins to resemble a vast purgatory that imprisons them.
+                        Only then does the truth sink in: this is a path thinner than a strand of hair and sharper than a blade.
+                    </p>
 
-                <p class="docs-detail-text">
-                    Life is cruel precisely because even what lies right before our eyes cannot be predicted -
-                    and that, too, is human destiny.
-                    We try to protect ourselves by inventing chains of cause and effect to explain the incomprehensible,
-                    yet not every shape of life can be accounted for in this way. Death, above all, defies it.
-                    Luis's journey, as he slowly comes to accept all of this,
-                    begins to resemble that of a broken hero who has lost everything.
-                    As the desert once again transforms into a spiritual and mythic landscape, the rave music -
-                    once nothing but noise - begins to sound like music to Luis as well.
-                    The dancing bodies now seem like rituals that expose pain and resist the fragility of life.
-                </p>
+                    <p class="docs-detail-text">
+                        Life is cruel precisely because even what lies right before our eyes cannot be predicted -
+                        and that, too, is human destiny.
+                        We try to protect ourselves by inventing chains of cause and effect to explain the incomprehensible,
+                        yet not every shape of life can be accounted for in this way. Death, above all, defies it.
+                        Luis's journey, as he slowly comes to accept all of this,
+                        begins to resemble that of a broken hero who has lost everything.
+                        As the desert once again transforms into a spiritual and mythic landscape, the rave music -
+                        once nothing but noise - begins to sound like music to Luis as well.
+                        The dancing bodies now seem like rituals that expose pain and resist the fragility of life.
+                    </p>
 
-                <p class="docs-detail-text">
-                    And yet this is not a film that surrenders to the defeatist idea that everything is governed
-                    by an uncontrollable fate.
-                    On the contrary, it speaks more clearly about life in the face of suffering and death.
-                    Because life is unpredictable, we must endure and cross the barren desert and keep moving forward.
-                    Even when an age of chaos and apocalypse arrives, we must not stop.
-                    Rather than standing still in fear of the death beneath our feet,
-                    we must dance - even if only a dance of oblivion - to confront our pain.
-                    What becomes clear, above all, is that we must not stop.
-                </p>
+                    <p class="docs-detail-text">
+                        And yet this is not a film that surrenders to the defeatist idea that everything is governed
+                        by an uncontrollable fate.
+                        On the contrary, it speaks more clearly about life in the face of suffering and death.
+                        Because life is unpredictable, we must endure and cross the barren desert and keep moving forward.
+                        Even when an age of chaos and apocalypse arrives, we must not stop.
+                        Rather than standing still in fear of the death beneath our feet,
+                        we must dance - even if only a dance of oblivion - to confront our pain.
+                        What becomes clear, above all, is that we must not stop.
+                    </p>
 
-                <p class="docs-detail-text">
-                    The act of filming this movie in a real desert,
-                    facing sandstorms with a film camera in hand, is itself a path of adventure beyond safe choices.
-                    Space, music, and a story designed to shock all exist to push cinematic immersion to its extreme.
-                    In an age where nearly everything the human mind can imagine can be rendered as an image,
-                    the spectacle that only the "real" can create - as in this film's experiment -
-                    may be the cinema's final proving ground.
-                </p>
+                    <p class="docs-detail-text">
+                        The act of filming this movie in a real desert,
+                        facing sandstorms with a film camera in hand, is itself a path of adventure beyond safe choices.
+                        Space, music, and a story designed to shock all exist to push cinematic immersion to its extreme.
+                        In an age where nearly everything the human mind can imagine can be rendered as an image,
+                        the spectacle that only the "real" can create - as in this film's experiment -
+                        may be the cinema's final proving ground.
+                    </p>
+                </div>
+                <!-- KO -->
+                <div class="lang-ko">
+                    <p class="docs-detail-text">
+                        여정이 계속되면서, 자드의 무리와 루이스 부자 사이에 느슨한 연대감이 형성되기 시작한다.
+                        공통된 이해관계 없이도 음식과 연료를 나누고,
+                        연민과 도움을 베푸는 단순한 행위가 그들의 오아시스가 된다.
+                        서로를 배신하지 않음으로써 보여주는 인간성은 관객에게 잠시나마 안도감을 준다.
+                        등장인물들의 개인적 배경이 완전히 드러나지는 않지만,
+                        팔이나 다리가 없는 레이버들의 몸이 그들이 살아온 삶을 드러내기 시작한다.
+                    </p>
 
-                <p class="docs-detail-source">
+                    <p class="docs-detail-text">
+                        그러나 이 시점부터 올리버 락세 감독은 의도적으로 관객의 기대를 배반한다.
+                        예측을 불허하는 비극들이 충격적인 힘으로 연이어 밀려온다.
+                        이 사람들이 서 있는 사막은 -
+                        한때 그들을 둘러싸고 있던 모든 사회적, 문화적 체계로부터 자유로워진 -
+                        오직 두 가지 길만 분명한 시험장이 된다: 삶 아니면 죽음.
+                        음악의 끊임없는 맥동, 엔진의 포효, 바람의 위협적인 울부짖음에 갇힌 채,
+                        갑작스러운 침묵의 도래가 시라트의 가장 궁극적인 공포가 된다.
+                    </p>
+
+                    <p class="docs-detail-text">
+                        끊임없는 고통 앞에서 모두가 신에게 향하지만 - 인정도 자비도 나타나지 않는다.
+                        시라트에 신이 존재한다면, 그것은 분명 무자비하고 잔혹한 벌만을 내리는 신일 것이다.
+                        등장인물들은 자신의 운명을 주사위에 맡긴 존재가 되고,
+                        사막은 그들을 가두는 광대한 연옥을 닮기 시작한다.
+                        그제야 진실이 스며든다: 이것은 머리카락보다 가늘고 칼날보다 날카로운 길이다.
+                    </p>
+
+                    <p class="docs-detail-text">
+                        삶이 잔혹한 것은 바로 눈앞의 것조차 예측할 수 없기 때문이며 -
+                        그것 또한 인간의 운명이다.
+                        우리는 이해할 수 없는 것을 설명하기 위해 인과의 사슬을 만들어 자신을 보호하려 하지만,
+                        삶의 모든 형태가 이렇게 설명될 수 있는 것은 아니다. 무엇보다 죽음이 그렇다.
+                        루이스의 여정은 이 모든 것을 서서히 받아들이면서,
+                        모든 것을 잃은 부서진 영웅의 여정을 닮아간다.
+                        사막이 다시 한번 영적이고 신화적인 풍경으로 변모할 때, 레이브 음악은 -
+                        한때 소음에 불과했던 - 루이스에게도 음악으로 들리기 시작한다.
+                        춤추는 몸들은 이제 고통을 드러내고 삶의 나약함에 저항하는 의식처럼 보인다.
+                    </p>
+
+                    <p class="docs-detail-text">
+                        그러나 이것은 모든 것이 통제할 수 없는 운명에 의해 지배된다는
+                        패배주의적 생각에 굴복하는 영화가 아니다.
+                        오히려 고통과 죽음 앞에서 삶에 대해 더 분명하게 말한다.
+                        삶이 예측 불가능하기에, 우리는 인내하며 황량한 사막을 건너 계속 나아가야 한다.
+                        혼돈과 종말의 시대가 닥쳐도, 우리는 멈추어서는 안 된다.
+                        발아래 죽음을 두려워하며 서 있기보다,
+                        우리는 춤을 춰야 한다 - 설령 망각의 춤일지라도 - 고통에 맞서기 위해.
+                        무엇보다 분명해지는 것은, 우리는 멈추어서는 안 된다는 것이다.
+                    </p>
+
+                    <p class="docs-detail-text">
+                        이 영화를 실제 사막에서 촬영하며,
+                        모래폭풍을 맞으며 필름 카메라를 손에 든 행위 자체가 안전한 선택을 넘어선 모험의 길이다.
+                        공간, 음악, 그리고 충격을 주기 위해 설계된 이야기 모두 영화적 몰입을 극한으로 밀어붙이기 위해 존재한다.
+                        인간의 마음이 상상할 수 있는 거의 모든 것이 이미지로 구현될 수 있는 시대에,
+                        이 영화의 실험처럼 오직 "리얼"만이 창조할 수 있는 스펙터클은
+                        영화의 마지막 시험대일지도 모른다.
+                    </p>
+                </div>
+
+                <!-- Source -->
+                <p class="docs-detail-source lang-en">
                     Source: Sisa Journal (<a href="https://www.sisajournal.com" target="_blank">https://www.sisajournal.com</a>)
+                </p>
+                <p class="docs-detail-source lang-ko">
+                    출처: 시사저널 (<a href="https://www.sisajournal.com" target="_blank">https://www.sisajournal.com</a>)
                 </p>
             </div>
         </article>
@@ -266,13 +435,20 @@
                         </span>
                     </div>
 
-                    
+
                 </div>
             </div>
         </footer>
     </main>
 
     <script src="./script.js"></script>
+    <script>
+        function setLang(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
 </body>
 
 </html>
